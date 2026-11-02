@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b16"><meta name="description" content="Vidora — a beautiful video link and file helper.">
+<title>Vidora — Video Studio</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">▶</span><span>vidora<span class="dot">.</span></span></a>
+  <nav><a href="#how">How it works</a><a href="#features">Features</a></nav>
+  <span class="status"><i></i> READY TO GO</span>
+</header>
+<main>
+<section class="hero">
+  <div class="eyebrow"><span class="spark">✦</span> YOUR VIDEO WORKSPACE</div>
+  <h1>Make your videos<br><span>go further.</span></h1>
+  <p class="sub">Preview video links, inspect your own video files, and download direct video files you’re allowed to save.</p>
+  <div class="studio">
+    <div class="studio-head"><div><span class="live-dot"></span> VIDEO STUDIO</div><span class="secure">⌁ PRIVATE & SECURE</span></div>
+    <div class="tabs"><button class="tab active" data-tab="link">⌁ &nbsp;Video link</button><button class="tab" data-tab="file">▧ &nbsp;My video file</button></div>
+    <div id="linkPanel" class="panel">
+      <label for="url">PASTE A VIDEO URL</label>
+      <div class="urlbox"><span class="url-icon">↗</span><input id="url" type="url" placeholder="https://example.com/my-video.mp4" autocomplete="url"><button id="clear" class="clear" title="Clear">×</button></div>
+      <div class="hint">Direct MP4, WebM or other browser-playable video links are supported.</div>
+      <button id="inspect" class="primary"><span>Inspect video</span><b>→</b></button>
+      <div id="linkResult" class="result hidden"></div>
+    </div>
+    <div id="filePanel" class="panel hidden">
+      <label for="fileInput">CHOOSE A VIDEO FROM YOUR DEVICE</label>
+      <label class="dropzone" for="fileInput"><span class="upload-icon">↑</span><strong>Tap to choose a video</strong><small>MP4 · WebM · MOV · your file stays on your device</small></label>
+      <input id="fileInput" type="file" accept="video/*" hidden>
+      <div id="fileResult" class="result hidden"></div>
+    </div>
+    <div class="fineprint">Only download videos you own or have permission to save. YouTube links can be previewed, but this site does not bypass YouTube’s download restrictions.</div>
+  </div>
+  <div class="trust-row"><span>✧ No account needed</span><span>✧ Works on mobile</span><span>✧ No files uploaded</span></div>
+</section>
+<section id="features" class="features">
+  <div class="section-kicker">BUILT FOR A SMOOTHER WORKFLOW</div><h2>Everything you need.<br><span>Nothing in the way.</span></h2>
+  <div class="feature-grid">
+    <article><div class="ficon purple">◉</div><h3>Quick preview</h3><p>Check a supported direct video link before saving it.</p></article>
+    <article><div class="ficon blue">▤</div><h3>File details</h3><p>See the video duration, format, dimensions and file size when available.</p></article>
+    <article><div class="ficon pink">↓</div><h3>Simple download</h3><p>Save direct video files to your device with one tap.</p></article>
+  </div>
+</section>
+<section id="how" class="how"><div><div class="section-kicker">THREE SIMPLE STEPS</div><h2>From link to<br><span>your library.</span></h2></div>
+<div class="steps"><div><b>01</b><span><strong>Paste a link</strong><small>Use a direct video file URL.</small></span></div><div><b>02</b><span><strong>Inspect details</strong><small>Check the preview and file information.</small></span></div><div><b>03</b><span><strong>Save your video</strong><small>Download when you have permission.</small></span></div></div></section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">▶</span><span>vidora<span class="dot">.</span></span></a><span>Made for creators. Use responsibly.</span><span>© <span id="year"></span> VIDORA</span></footer>
+<div id="toast" class="toast"></div>
+<script src="app.js"></script>
+</body></html>
